@@ -9,11 +9,17 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync fork with upstream (Timeverse/My-TW-Coverage)
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+      - name: Checkout fork
+        uses: actions/checkout@v4
         with:
-          target_sync_branch: master
-          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-          upstream_sync_branch: master
-          upstream_sync_repo: Timeverse/My-TW-Coverage
-          test_mode: false
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync with upstream
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "action@github.com"
+          git remote add upstream https://github.com/Timeverse/My-TW-Coverage.git
+          git fetch upstream master
+          git merge upstream/master --no-edit -m "chore: sync with upstream Timeverse/My-TW-Coverage"
+          git push origin master
