@@ -1,0 +1,19 @@
+name: Sync Fork with Upstream
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # UTC 02:00 = 台灣時間 10:00，每天自動執行
+  workflow_dispatch:      # 允許手動觸發
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync fork with upstream (Timeverse/My-TW-Coverage)
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        with:
+          target_sync_branch: master
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          upstream_sync_branch: master
+          upstream_sync_repo: Timeverse/My-TW-Coverage
+          test_mode: false
