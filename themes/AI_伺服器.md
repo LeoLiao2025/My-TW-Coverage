@@ -2,9 +2,9 @@
 
 > AI 訓練與推論伺服器完整供應鏈，從晶片到系統到散熱
 
-**涵蓋公司數:** 148
+**涵蓋公司數:** 151
 
-**相關主題:** [[CoWoS]] (39) | [[HBM]] (16) | [[NVIDIA]] (104) | [[CPO]] (13) | [[資料中心]] (77)
+**相關主題:** [[CoWoS]] (40) | [[HBM]] (19) | [[NVIDIA]] (107) | [[CPO]] (13) | [[資料中心]] (79)
 
 ---
 
@@ -87,7 +87,7 @@
 - **5498 凱崴** (Tools & Accessories)
 - **8390 金益鼎** (Waste Management)
 
-## 相關公司 (78)
+## 相關公司 (81)
 
 - **2610 華航** (Airlines)
 - **6175 立敦** (Aluminum)
@@ -150,11 +150,14 @@
 - **3030 德律** (Scientific & Technical Instruments)
 - **6425 易發** (Semiconductor Equipment & Materials)
 - **2329 華泰** (Semiconductors)
+- **2408 南亞科** (Semiconductors)
+- **3711 日月光投控** (Semiconductors)
 - **6291 沛亨** (Semiconductors)
 - **6411 晶焱** (Semiconductors)
 - **6415 矽力-KY** (Semiconductors)
 - **6435 大中** (Semiconductors)
 - **6693 廣閎科** (Semiconductors)
+- **8150 南茂** (Semiconductors)
 - **2406 國碩** (Solar)
 - **1303 南亞** (Specialty Chemicals)
 - **3388 崇越電** (Specialty Chemicals)

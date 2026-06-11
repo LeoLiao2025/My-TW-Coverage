@@ -4,11 +4,11 @@
 
 **涵蓋公司數:** 80
 
-**相關主題:** [[台積電]] (182) | [[鴻海]] (63)
+**相關主題:** [[台積電]] (182) | [[鴻海]] (64)
 
 ---
 
-## 上游 (14)
+## 上游 (13)
 
 - **2414 精技** (Computer Hardware)
 - **3406 玉晶光** (Computer Hardware)
@@ -20,7 +20,6 @@
 - **1569 濱川** (Metal Fabrication)
 - **3376 新日興** (Metal Fabrication)
 - **3105 穩懋** (Semiconductors)
-- **3711 日月光投控** (Semiconductors)
 - **4966 譜瑞-KY** (Semiconductors)
 - **3518 柏騰** (Specialty Industrial Machinery)
 - **2430 燦坤** (Specialty Retail)
@@ -30,7 +29,7 @@
 - **2367 燿華** (Electronic Components)
 - **6821 聯寶** (Electronic Components)
 
-## 下游 (39)
+## 下游 (40)
 
 - **2382 廣達** (Computer Hardware)
 - **2385 群光** (Computer Hardware)
@@ -65,6 +64,7 @@
 - **7610 聯友金屬-創** (Other Industrial Metals & Mining)
 - **3030 德律** (Scientific & Technical Instruments)
 - **3034 聯詠** (Semiconductors)
+- **3711 日月光投控** (Semiconductors)
 - **6937 天虹** (Semiconductors)
 - **6146 耕興** (Specialty Business Services)
 - **6585 鼎基** (Specialty Chemicals)

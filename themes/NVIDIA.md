@@ -2,9 +2,9 @@
 
 > NVIDIA GPU 及 AI 平台台灣供應鏈
 
-**涵蓋公司數:** 104
+**涵蓋公司數:** 107
 
-**相關主題:** [[CoWoS]] (39) | [[HBM]] (16) | [[AI 伺服器]] (148) | [[台積電]] (182)
+**相關主題:** [[CoWoS]] (40) | [[HBM]] (19) | [[AI 伺服器]] (151) | [[台積電]] (182)
 
 ---
 
@@ -53,12 +53,13 @@
 - **6882 甲尚** (Software - Application)
 - **3045 台灣大** (Specialty Retail)
 
-## 下游 (16)
+## 下游 (19)
 
 - **3163 波若威** (Communication Equipment)
 - **3324 雙鴻** (Computer Hardware)
 - **2308 台達電** (Electronic Components)
 - **2317 鴻海** (Electronic Components)
+- **2327 國巨** (Electronic Components)
 - **3037 欣興** (Electronic Components)
 - **3653 健策** (Electronic Components)
 - **6862 三集瑞-KY** (Electronic Components)
@@ -69,6 +70,8 @@
 - **4549 桓達** (Scientific & Technical Instruments)
 - **3189 景碩** (Semiconductor Equipment & Materials)
 - **2449 京元電子** (Semiconductors)
+- **3711 日月光投控** (Semiconductors)
+- **6239 力成** (Semiconductors)
 - **7749 意騰-KY** (Software - Infrastructure)
 - **5607 遠雄港** (Specialty Business Services)
 

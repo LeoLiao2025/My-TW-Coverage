@@ -21,6 +21,8 @@ Usage:
   python scripts/detect_changes.py --batch 101              # by batch
 
 Options:
+  --base HEAD        Git ref to compare market cap against (default HEAD;
+                     use e.g. HEAD~1 if the refresh was already committed)
   --mcap-pct 30      Market cap change threshold (%)
   --rev-pct 40       Revenue QoQ change threshold (%)
   --margin-pp 10     Margin QoQ change threshold (percentage points)
@@ -71,11 +73,11 @@ def quarterly_row(content, label):
     return []
 
 
-def get_head_content(filepath):
-    """Read the file as it was at git HEAD. Returns None if not in HEAD."""
+def get_base_content(filepath, base):
+    """Read the file as it was at the base git ref. Returns None if absent."""
     rel = os.path.relpath(filepath, PROJECT_ROOT).replace(os.sep, "/")
     result = subprocess.run(
-        ["git", "show", f"HEAD:{rel}"],
+        ["git", "show", f"{base}:{rel}"],
         cwd=PROJECT_ROOT,
         capture_output=True,
     )
@@ -84,18 +86,18 @@ def get_head_content(filepath):
     return result.stdout.decode("utf-8", errors="replace")
 
 
-def detect(filepath, mcap_pct, rev_pct, margin_pp):
+def detect(filepath, mcap_pct, rev_pct, margin_pp, base):
     """Return a list of signal strings for one report file."""
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
     signals = []
 
-    # Signal 1: market cap vs HEAD (only meaningful between refresh and commit)
+    # Signal 1: market cap vs base ref
     new_mcap = get_market_cap(content)
     if new_mcap:
-        head = get_head_content(filepath)
-        old_mcap = get_market_cap(head) if head else None
+        old = get_base_content(filepath, base)
+        old_mcap = get_market_cap(old) if old else None
         if old_mcap:
             pct = (new_mcap - old_mcap) / old_mcap * 100
             if abs(pct) >= mcap_pct:
@@ -140,19 +142,20 @@ def main():
     rev_pct = pop_opt("--rev-pct", 40.0)
     margin_pp = pop_opt("--margin-pp", 10.0)
     json_out = pop_opt("--json", None, str)
+    base = pop_opt("--base", "HEAD", str)
 
     tickers, sector, desc = parse_scope_args(args)
     files = find_ticker_files(tickers, sector)
 
     print(f"Detecting change signals for {desc}...")
-    print(f"Thresholds: 市值 ±{mcap_pct:g}% | 營收 QoQ ±{rev_pct:g}% | Margin ±{margin_pp:g}pp")
+    print(f"Base: {base} | Thresholds: 市值 ±{mcap_pct:g}% | 營收 QoQ ±{rev_pct:g}% | Margin ±{margin_pp:g}pp")
     print(f"Found {len(files)} files.\n")
 
     flagged = {}
     for ticker in sorted(files):
         fp = files[ticker]
         try:
-            signals = detect(fp, mcap_pct, rev_pct, margin_pp)
+            signals = detect(fp, mcap_pct, rev_pct, margin_pp, base)
         except Exception as e:
             print(f"  {ticker}: ERROR ({e})")
             continue

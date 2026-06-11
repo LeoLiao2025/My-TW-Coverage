@@ -2,7 +2,7 @@
 
 > 特斯拉電動車台灣供應鏈成員
 
-**涵蓋公司數:** 47
+**涵蓋公司數:** 48
 
 **相關主題:** [[電動車]] (129) | [[碳化矽]] (22)
 
@@ -44,7 +44,7 @@
 - **6603 富強鑫** (Specialty Industrial Machinery)
 - **2066 世德** (Tools & Accessories)
 
-## 相關公司 (17)
+## 相關公司 (18)
 
 - **1319 東陽** (Auto Parts)
 - **1563 巧新** (Auto Parts)
@@ -63,3 +63,4 @@
 - **7610 聯友金屬-創** (Other Industrial Metals & Mining)
 - **2360 致茂** (Scientific & Technical Instruments)
 - **4721 美琪瑪** (Specialty Chemicals)
+- **2049 上銀** (Tools & Accessories)
