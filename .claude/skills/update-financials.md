@@ -27,7 +27,7 @@ The user can specify scope in their message:
 2. Run the update script:
 
 ```bash
-cd "f:\My TW Coverage" && python scripts/update_financials.py [ARGS]
+python scripts/update_financials.py [ARGS]
 ```
 
 3. Report results: how many updated, skipped, failed.

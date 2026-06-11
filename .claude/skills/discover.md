@@ -25,7 +25,7 @@ Find every Taiwan-listed company related to a keyword, technology, or trend. Two
 Run the discover script to scan existing reports:
 
 ```bash
-cd "f:\My TW Coverage" && python scripts/discover.py "<BUZZWORD>"
+python scripts/discover.py "<BUZZWORD>"
 ```
 
 Report the results to the user: how many companies found, grouped by relationship type.
@@ -72,7 +72,7 @@ This is the key differentiator. When the database has zero mentions:
 
 5. **Rebuild indexes** after all updates:
    ```bash
-   cd "f:\My TW Coverage" && python scripts/discover.py "<BUZZWORD>" --rebuild
+   python scripts/discover.py "<BUZZWORD>" --rebuild
    ```
 
 ### Step 4: Offer to Create Theme

@@ -18,7 +18,7 @@ Add a new Taiwan-listed company to the coverage database. Generates the .md repo
 ### Step 1: Generate the base file
 
 ```bash
-cd "f:\My TW Coverage" && python scripts/add_ticker.py <ticker> <name> [--sector <sector>]
+python scripts/add_ticker.py <ticker> <name> [--sector <sector>]
 ```
 
 This creates the .md file with metadata + financials from yfinance and placeholder enrichment sections.
